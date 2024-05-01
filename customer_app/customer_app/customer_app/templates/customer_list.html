@@ -1,0 +1,24 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jakes Customers</title>
+</head>
+<body>
+    <h1>Customer Info</h1>
+
+    <!-- Move the button to the upper right-hand side -->
+    <div style="position: absolute; top: 20px; right: 20px;">
+        <a href="{% url 'add_customer' %}" class="button">Click To Add Customer</a>
+    </div>
+
+    <ul>
+        <!-- List of customers -->
+        {% for customer in customers %}
+        <li>{{ customer.first_name }} {{ customer.last_name }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
